@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.heading{
+  background-color:aliceblue;
+  padding: 3%;
+
+}
+h1{
+  padding-bottom: 1%;
+}
+
+.table {
+  background-color:white;
+}
+
+footer{
+  text-align:center;
+  padding-bottom: 2%;
+}
+
+.search {
+padding-bottom:2%;
+padding-top:2%
+}

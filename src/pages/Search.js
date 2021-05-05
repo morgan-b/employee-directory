@@ -3,7 +3,7 @@ import API from "../utils/API";
 import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
-import Alert from "../components/Alert";
+
 import TableHeader from "../components/TableHeader";
 
 const sortTypes = {
@@ -63,21 +63,21 @@ class Search extends Component {
     console.log(this.state.results);
     return (
       <div>
-        <Container>
-          <h1 className="text-center">Search By Employee Name!</h1>
-          <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-          >
-            {this.state.error}
-          </Alert>
+        
+            <div className="heading">
+          <h1 className="text-center">Employee Directory</h1>
+          <h5 className="text-center">Click on the carrot to sort by First Name or search by first or last name to narrow results.</h5>
+          </div>
+          <Container>
+
           <SearchForm
             search={this.state.search}
             handleInputChange={this.handleInputChange}
             handleFormSubmit={this.handleFormSubmit}
           />
-
-          <table className="table table-bordered table-responsive">
+</Container>
+<Container>
+          <table className="table table-bordered table-responsive-xl">
             <TableHeader onClick={this.onSortChange}></TableHeader>
             {this.state.results
               .filter((results) => {
@@ -101,13 +101,15 @@ class Search extends Component {
                   email={result.email}
                   image={result.picture.large}
                   phone={result.cell}
-                  dob={result.dob.date}
+                  dob={result.dob.date.slice(0, 10)}
                   key={result.login.uuid}
                 />
               ))}
-          </table>
+        </table>
         </Container>
+          
       </div>
+     
     );
   }
 }

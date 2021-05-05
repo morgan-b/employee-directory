@@ -5,7 +5,7 @@ import axios from "axios";
 export default {
 
   getEmployees: function() {
-    return axios.get("https://randomuser.me/api/?results=25");
+    return axios.get("https://randomuser.me/api/?nat=US&results=25");
   }
 
 };

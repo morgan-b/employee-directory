@@ -6,12 +6,10 @@ function SearchForm(props) {
   return (
     <form className="search">
       <div className="form-group">
-        <label htmlFor="employee_name">Search Employee First or Last Name:</label>
+        <br></br>
         <input
           value={props.value}
           onChange={props.handleInputChange}
-        //   name="name"
-        //   list="breeds"
           type="text"
           className="form-control"
           placeholder="Type in a name to begin"
