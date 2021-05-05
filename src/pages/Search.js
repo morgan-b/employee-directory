@@ -4,6 +4,7 @@ import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 import Alert from "../components/Alert";
+import TableHeader from "../components/TableHeader";
 
 const sortTypes = {
   up: {
@@ -58,12 +59,11 @@ class Search extends Component {
   };
   render() {
     const { currentSort } = this.state;
-  
 
     console.log(this.state.results);
     return (
       <div>
-        <Container style={{ minHeight: "80%" }}>
+        <Container>
           <h1 className="text-center">Search By Employee Name!</h1>
           <Alert
             type="danger"
@@ -78,22 +78,7 @@ class Search extends Component {
           />
 
           <table className="table table-bordered table-responsive">
-            <thead>
-              <tr>
-                <th key="1" scope="col">Image</th>
-                <th key="2"scope="col">
-                  <select
-                    name="alphabetical"
-                    onClick={this.onSortChange}
-                  ></select>
-                  <br></br>First Name{" "}
-                </th>
-                <th key="3" scope="col">Last Name</th>
-                <th key="4" scope="col">Email</th>
-                <th key="5" scope="col">Phone</th>
-                <th key="6" scope="col">DOB</th>
-              </tr>
-            </thead>
+            <TableHeader onClick={this.onSortChange}></TableHeader>
             {this.state.results
               .filter((results) => {
                 if (!this.state.search) {
@@ -105,9 +90,8 @@ class Search extends Component {
                   results.name.last
                     .toLowerCase()
                     .includes(this.state.search.toLocaleLowerCase())
-                ) 
+                )
                   return results;
-                
               })
               .sort(sortTypes[currentSort].fn)
               .map((result) => (
@@ -119,10 +103,8 @@ class Search extends Component {
                   phone={result.cell}
                   dob={result.dob.date}
                   key={result.login.uuid}
-
                 />
               ))}
-              
           </table>
         </Container>
       </div>
