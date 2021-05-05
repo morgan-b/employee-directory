@@ -5,7 +5,7 @@ import axios from "axios";
 export default {
 
   getEmployees: function() {
-    return axios.get("https://randomuser.me/api/?results=5&inc=name&noinfo");
+    return axios.get("https://randomuser.me/api/?results=15");
   }
 //   getNamesList: function() {
 //     return axios.get("https://dog.ceo/api/breeds/list");

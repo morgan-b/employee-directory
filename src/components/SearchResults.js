@@ -3,13 +3,19 @@ import React from "react";
 
 function SearchResults(props) {
   return (
-    <ul className="list-group search-results">
-      {props.results.map(result => (
-        <li key={result.name} className="list-group-item">
-         {props.name}
-        </li>
-      ))}
-    </ul>
+    
+     
+        <tbody>
+          {/* <li  key={props.first} className="list-group-item"> */}
+          <img src={props.image}></img>
+          <td>{props.first}</td>
+          <td>{props.last}</td>
+          <td>{props.email}</td>
+          <td>{props.phone}</td>
+          <td>{props.dob}</td>
+        </tbody>
+
+
   );
 }
 

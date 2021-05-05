@@ -9,13 +9,13 @@ function SearchForm(props) {
         <label htmlFor="employee_name">Employee Name:</label>
         <input
           value={props.search}
-        //   onChange={props.handleInputChange}
-          name="name.first"
-          list="breeds"
-          type="text"
+          onChange={props.handleInputChange}
+        //   name="name"
+        //   list="breeds"
+          type="search"
           className="form-control"
           placeholder="Type in a name to begin"
-          id="name"
+          id="search"
         />
     
         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
