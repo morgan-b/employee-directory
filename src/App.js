@@ -9,12 +9,12 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+
         <Wrapper>
-          <Route exact path="/" component={Search} />
+          <Route exact path="employee-directory/" component={Search} />
 
         </Wrapper>
-        <Footer />
+
       </div>
     </Router>
   );
