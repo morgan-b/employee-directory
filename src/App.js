@@ -1,22 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import TableHeader from "./components/TableHeader";
 import Search from "./pages/Search";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <div>
 
         <Wrapper>
-          <Route exact path="employee-directory/" component={Search} />
+          <Search>
+
+          </Search>
 
         </Wrapper>
 
       </div>
-    </Router>
+    // </Router>
   );
 }
 
