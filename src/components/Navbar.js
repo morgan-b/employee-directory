@@ -6,16 +6,13 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/employee-directory/search">
-       Employee Directory
-      </Link>
       <div>
         <ul className="navbar-nav">
           
           <li className="nav-item">
             <Link
-              to="/employee-directory/search"
-              className={window.location.pathname === "/employee-directory/search" ? "nav-link active" : "nav-link"}
+              to="/"
+              className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
             >
               Search
             </Link>
