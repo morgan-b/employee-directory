@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation
 
-Here is the live deployed app on Github Pages [here](http://localhost:3000) 
+Here is the live deployed app on Github Pages [here](https://morgan-b.github.io/employee-directory/) 
 
 To run locally: npm i npm start All packages are providedin the package.json file
 
